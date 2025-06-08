@@ -1,97 +1,141 @@
 * {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
   font-family: 'Inter', sans-serif;
 }
 
 body {
-  background-color: #111111;
-  color: #e0e0e0;
-  line-height: 1.6;
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #111;
+  color: #eee;
 }
 
-a {
-  color: inherit;
+.header{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+.heading h2{
+    margin-left: 30px;
+    color: white;
+}
+
+.heading a {
   text-decoration: none;
 }
 
-.main-header {
-    background-color:black;
-    color: white;
-    padding: 10px 20px;
-    text-align: center;  
-}
-
-.main-header a {
-    color: white;
-    text-decoration: none;
-    font-size: 24px;
-}
-
-
-header{
-    background-color: black;
-    color: white;
-    padding: 10px 0;
-    text-align: center;
+.navbar-icons{
     display: flex;
-    justify-content: space-between;
+    gap: 60px;
+    margin-right: 50px;
+    font-size: large;
+    margin-top: 10px;
 }
-
-.nav-icons {
-   
+.hovering{
+    display: none;
+}
+.profile-card{
+    display: none;
+    z-index: 1000;
+    background-color: black;
+    
+}
+.searchbar:hover .hovering{
+    display: block;
+    position: absolute;
+    right: 0px;
+    top: 40px;
+    padding: 0px 10px;
+    border: 1px solid grey;
+}
+.cart:hover .hovering{
+    display: block;
+    position: absolute;
+    right: 0px;
+    top: 60px;
+    padding: 0px 10px;
+    border: 1px solid grey;
+}
+.profile-icon:hover .profile-card{
+    display: block;
+    position: absolute;
+    right: 0px;
+    width: 300px;
+    height: 250px;  
+    border: 1px solid gray;   
+}
+.profile-card button{
+    background-color: gray;
     color: white;
-    padding: 10px 10px;
+    height: 40px;
+    width:180px ; 
 }
-.nav-icons a {
-    color: white;
-    text-decoration: none;
-    padding: 10px 20px;
-}
-.nav-icons a:hover {
-    background-color: #575757;
-}
-.fas fa-search {
-    color: white;
-    font-size: 10px;
-}
-.fas fa-shopping-cart {
-    color: white;
-    font-size: 10px;
-}
-.fas fa-user {
-    color: white;
-    font-size: 10px;
-}
-
-.cart-icon {
+.btn{
   position: relative;
-  font-size: 1.5rem;
-  color: #fff;
+  bottom: 0px;
 }
 
-.cart-count {
-  background: red;
-  border-radius: 50%;
-  padding: 2px 6px;
-  font-size: 0.75rem;
-  position: absolute;
-  top: -10px;
-  right: -10px;
+.profile-card{
+    padding-left: 20px;
+   padding-top: 10px;
 }
 
-
-.logo {
-  font-size: 24px;
-  font-weight: 700;
-  color: #d3d3d3;
+.searchbar{
+    position: relative;
+}
+.cart{
+    position: relative;
+    bottom: 20px;
 }
 
-.logo span {
-  color: #5f9df7;
+.fa-solid {
+ color:white;
+ background-color: black;
+}
+.profile-icon{
+    position: relative;
+}
+.number{
+    width:20px;
+    height:20px;
+    border-radius: 50%;
+    background-color: red;
+    color:white;
+    display: flex;
+    justify-content: center;
+    position: relative;
+    left: 15px;
+    top: 8px;
+    
+}
+.number p{
+    position: relative;
+    bottom: 5px;
 }
 
+ .smimage{
+     width: 400px;
+    height: 200px;
+ }
+ .smimage img{
+     width:150px;
+    height:150px;
+    position: relative;
+    left: 50px;
+ }
+.image1{
+    display: flex;
+}
+
+.cartbuttons{
+    display: flex;
+    width: fit-content;
+    border: 1px solid gray;
+    position: relative;
+    top: 30px;
+    
+}
 .header-actions i {
   font-size: 18px;
   margin-left: 20px;
@@ -159,22 +203,27 @@ h1 {
   display: flex;
   flex-direction: column;
   gap: 5px;
-  
 }
 
 .price {
   color: white;
   font-size: 28px;
   font-weight: bold;
+  position: relative;
+  top: 20px;
 }
 
 .old-price {
   color: #999;
   text-decoration: line-through;
+  position: relative;
+  top: -15px;
+  left: 110px;
+  font-weight: bold;
 }
 
 .discount {
-  color: #00ff7f;
+  color: #0f5030;
 }
 
 .tax {
@@ -182,9 +231,20 @@ h1 {
   
 }
 
-.stock {
-  color: #00ff7f;
-  font-weight: bold;
+
+#btn0 {
+  position: relative;
+  width: 150px;
+  height: 40px;
+  background-color:rgb(2, 136, 2);
+  color: white;
+  left: 350px;
+  bottom: 70px;
+  border-radius: 5px;
+}
+
+#btn0:hover {
+  background-color: #00ff7f;
 }
 
 .offers h4 {
@@ -206,7 +266,7 @@ h1 {
   cursor: pointer;
 }
 
-.add-to-cart {
+.add-to-cart0 {
   background-color: red;
   color: white;
   border: none;
@@ -217,9 +277,10 @@ h1 {
   width: 150px;
 }
 
-.add-to-cart:hover {
+.add-to-cart0:hover {
   background-color: darkred;
 }
+
 
 .tabs {
   display: flex;
@@ -270,7 +331,106 @@ h1 {
   font-weight: 600;
 }
 
+/* Related products section */
 
+
+
+.Related-products {
+  padding: 60px 20px;
+  background-color: #0f0f0f;
+}
+
+.Related-products h2{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 20px;
+}
+.section-title {
+  font-size: 32px;
+  text-align: center;
+  margin-bottom: 30px;
+  color: white;
+}
+
+.products-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
+  gap: 25px;
+  padding: 0 20px;
+}
+
+.product-card {
+  background-color: #1b1b1b;
+  color: white;
+  padding: 20px;
+  transition: transform 0.3s, box-shadow 0.3s;
+  border: 1px solid #333;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+.product-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 6px 16px rgba(255, 0, 0, 0.3);
+}
+
+.product-card img {
+  width: 100%;
+  max-height: 160px;
+  object-fit: contain;
+  margin-bottom: 15px;
+}
+
+.rating1 {
+  color: red;
+  font-size: 18px;
+  margin-bottom: 10px;
+  letter-spacing: 2px;
+}
+
+.product-card h3 {
+  font-size: 18px;
+  margin-bottom: 8px;
+}
+
+.product-card p {
+  font-size: 14px;
+  color: #bbb;
+  margin-bottom: 12px;
+  height: 36px; 
+  overflow: hidden;
+}
+
+.price1 {
+  font-size: 16px;
+  color: #fff;
+  margin-bottom: 5px;
+  font-weight: bold; 
+  justify-content: left;
+}
+
+.old-price1 {
+  text-decoration: line-through;
+  color: #777;
+  margin-left: 10px;
+  font-size: 14px;
+}
+
+.add-to-cart {
+  background-color: red;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+  width: 100%;
+  transition: background-color 0.3s;
+}
+
+.add-to-cart:hover {
+  background-color: darkred;
+}
 
 /* our advantages section */
 
