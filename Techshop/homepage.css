@@ -7,8 +7,9 @@
 body {
   margin: 0;
   font-family: 'Segoe UI', sans-serif;
-  background-color: black;
+  background-color: rgb(7, 0, 0);
   color: #eee;
+
 }
 
 .header{
@@ -264,7 +265,10 @@ body {
 .featured-products h2 {
   font-size: 28px;
   color: #cfd1e1;
-  margin-bottom: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+ padding: 40px;
 }
 
 .products {
